@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Career Services Tools | Ensign College</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='12' height='12' x='3' y='3' rx='3' fill='%2310b981'/%3E%3Crect width='12' height='12' x='17' y='3' rx='3' fill='%2334d399'/%3E%3Crect width='12' height='12' x='3' y='17' rx='3' fill='%23fbbf24'/%3E%3Crect width='12' height='12' x='17' y='17' rx='3' fill='%2310b981'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --green: #005c3b;
+      --green-deep: #00412a;
+      --green-light: #e8f3ee;
+      --gold: #e5b640;
+      --gold-light: #fdf6e0;
+      --ink: #17342a;
+      --muted: #52645b;
+      --paper: #f6f7f4;
+      --line: #dce3dc;
+      --white: #fff;
+      --radius: 14px;
+      --shadow: 0 4px 16px rgba(0,40,20,.09);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.6 Inter, ui-sans-serif, system-ui, sans-serif; color: var(--ink); background: var(--paper); }
+    main { width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    .page-header { border-left: 6px solid var(--gold); padding: .4rem 0 .4rem 1.2rem; margin-bottom: 2rem; }
+    .page-header h1 { margin: 0; color: var(--green); font-size: clamp(1.8rem, 4.5vw, 2.75rem); letter-spacing: -0.02em; }
+    .page-header p { margin: .5rem 0 0; color: var(--muted); max-width: 52rem; }
+    .section { margin-bottom: 2.5rem; }
+    .section-head { display: flex; align-items: baseline; gap: .9rem; margin-bottom: 1rem; border-bottom: 2px solid var(--line); padding-bottom: .4rem; }
+    .section-head h2 { margin: 0; font-size: 1rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--green); }
+    .section-head .count { font-size: .78rem; font-weight: 700; color: var(--muted); letter-spacing: .04em; }
+    .grid { display: grid; gap: .85rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+    .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1rem; gap: .3rem; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: .5rem; margin-bottom: .15rem; }
+    .card h3 { margin: 0; font-size: 1rem; color: var(--green); line-height: 1.3; flex: 1; }
+    .badge { flex-shrink: 0; display: inline-block; padding: .18rem .55rem; border-radius: 99px; font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+    .badge-live   { background: #dcfce7; color: #166534; }
+    .badge-pilot  { background: #fef9c3; color: #854d0e; }
+    .badge-internal { background: #e0e7ff; color: #3730a3; }
+    .badge-platform { background: var(--gold-light); color: #7c5c00; }
+    .badge-auto   { background: #f3e8ff; color: #6b21a8; }
+    .badge-data   { background: #e0f2fe; color: #0c4a6e; }
+    .card p { margin: 0; font-size: .875rem; color: var(--muted); flex: 1; }
+    .card-actions { margin-top: .75rem; display: flex; flex-wrap: wrap; gap: .45rem; }
+    .btn { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .85rem; border-radius: 8px; font-size: .82rem; font-weight: 700; text-decoration: none; transition: filter 130ms ease, transform 130ms ease; }
+    .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-secondary { background: var(--green-light); color: var(--green-deep); }
+    .btn-dim { background: #f0f0f0; color: var(--muted); font-weight: 600; }
+    .btn-dim:hover { filter: none; transform: none; }
+    .mentor-note { background: var(--gold-light); border: 1px solid #f0d880; border-radius: var(--radius); padding: .85rem 1.1rem; font-size: .875rem; color: #5c4500; margin-bottom: 2rem; }
+    .mentor-note strong { color: #3a2c00; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; align-items: center; }
+    footer a { color: var(--green); text-decoration: none; font-weight: 600; }
+    @media (max-width: 640px) {
+      main { padding: 1.75rem 0 2.5rem; }
+      .grid, .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Vercel Speed Insights -->
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+  </head>
+<body>
+  <main>
+
+    <header class="page-header">
+      <h1>Career Services Tools</h1>
+      <p>All AI agents, platforms, automations, and reporting tools used by Ensign College Career Services. For mentors and staff.</p>
+    </header>
+
+    <div class="mentor-note">
+      <strong>For mentors:</strong> Tools marked <span style="background:#dcfce7;color:#166534;padding:.1rem .4rem;border-radius:99px;font-size:.75rem;font-weight:700;">Live</span> are open now. Tools marked <span style="background:#fef9c3;color:#854d0e;padding:.1rem .4rem;border-radius:99px;font-size:.75rem;font-weight:700;">Pilot</span> are in limited testing. <strong>Never enter student names, IDs, or private records into any AI tool</strong> — these systems are not FERPA-cleared for identifiable data.
+    </div>
+
+    <!-- AI Agents - Student-Facing -->
+    <section class="section" aria-labelledby="s1">
+      <div class="section-head"><h2 id="s1">AI Agents &mdash; Student-Facing</h2><span class="count">6 tools</span></div>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-top"><h3>Career &amp; Major Explorer Coach</h3><span class="badge badge-live">Live</span></div>
+          <p>Interprets PathwayU results (interests, values, personality, workplace preferences), aligns them to Ensign College majors and certificates, and guides students through a career design process. Use after students complete PathwayU.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="/major-explorer/" target="_blank">Student Version &#8599;</a>
+            <a class="btn btn-secondary" href="/mentor-explorer/" target="_blank">Mentor Version &#8599;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Career Fair Coach</h3><span class="badge badge-live">Live</span></div>
+          <p>Employer research, Me in 30 Seconds pitch coaching, recruiter role-play, and question preparation. Used before the Career Fair and any employer meeting.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/career-fair/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Resume Coach</h3><span class="badge badge-live">Live</span></div>
+          <p>Socratic coaching for resumes &mdash; surfaces gaps and asks questions rather than rewriting. Covers CAR formula, action verbs, measurable impact, and relevance.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/resume/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Resume Improver</h3><span class="badge badge-live">Live</span></div>
+          <p>Direct-rewrite companion to the Resume Coach. Paste a bullet, get a structured revision. Best for students who need output, not coaching.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/resume-improver/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Interview Practice</h3><span class="badge badge-live">Live</span></div>
+          <p>Structured mock interview practice with FIT and STAR-method scoring and feedback. Supports voice answers via microphone.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/interview/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Academic Advisor</h3><span class="badge badge-live">Live</span></div>
+          <p>Source-guided Ensign College program and course-planning support. Grounded in official program guides. Does not store student records or chat history.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/advisor/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AI Agents - Mentor/Staff -->
+    <section class="section" aria-labelledby="s2">
+      <div class="section-head"><h2 id="s2">AI Agents &mdash; Mentor &amp; Staff</h2><span class="count">6 tools</span></div>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-top"><h3>ENS 101 Mentor Desk</h3><span class="badge badge-live">Live</span></div>
+          <p>Appointment 1a workspace for career mentors: guided 5-stage workflow (Begin, Ensign Connect, Internship Plan, Career Direction, Complete), interactive checklist, non-sensitive notes, copyable summary, and Mentor Copilot.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/ens101/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>LinkedIn Brew360 Coach</h3><span class="badge badge-live">Live</span></div>
+          <p>Coaches mentors through LinkedIn profile optimization based on the Brew360 algorithm &mdash; Topic DNA, recruiter visibility, C-A-R bullets, and a 30-day execution plan. Upload the student's PDF profile to get started.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net:10000/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Mentor Career Explorer Coach</h3><span class="badge badge-live">Live</span></div>
+          <p>Mentor-facing version of the Career Explorer. Same PathwayU interpretation engine with a coaching-oriented interface for guiding a student through the conversation.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/mentor-explorer/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Internship Expert</h3><span class="badge badge-live">Live</span></div>
+          <p>Official-source internship process and CPT guidance: registration, credit requirements, employer agreements, and work authorization rules.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="/internship/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Mentor Resume Assistant</h3><span class="badge badge-internal">Internal</span></div>
+          <p>Gives volunteer staff expert-level resume feedback grounded in Ensign resume template standards and current best practice. Built in Copilot Studio.</p>
+          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>PBWE Instructional Coach</h3><span class="badge badge-internal">Internal</span></div>
+          <p>Assists student TAs in coaching and grading teams in the Project-Based Work Experience course. Built in Copilot Studio.</p>
+          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AI Agents - Curriculum-Embedded -->
+    <section class="section" aria-labelledby="s3">
+      <div class="section-head"><h2 id="s3">AI Agents &mdash; Embedded in Curriculum</h2><span class="count">3 tools</span></div>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="card-top"><h3>Career Coach AI</h3><span class="badge badge-internal">Internal</span></div>
+          <p>General-purpose job-search assistant built in collaboration with BYU-Idaho. Deployed inside the revised Job Search Workshop and at Global Education Centers. Covers resumes, LinkedIn, interviewing, and job search strategy. Access via Canvas or Ensign Connect.</p>
+          <div class="card-actions"><span class="btn btn-dim">Canvas / Ensign Connect</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>CIS Marketing Coach</h3><span class="badge badge-internal">Internal</span></div>
+          <p>Reviews ESL student employee marketing content for grammar, clarity, and call-to-action quality before publication. Used by the CIS team. Built in Copilot Studio.</p>
+          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Coat of Arms Generator</h3><span class="badge badge-internal">Internal</span></div>
+          <p>Built for CAR 201. Generates a personalized coat of arms from a workbook activity on values, accomplishments, and talents. Embedded in the workshop flow.</p>
+          <div class="card-actions"><span class="btn btn-dim">Workshop only</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Platforms -->
+    <section class="section" aria-labelledby="s4">
+      <div class="section-head"><h2 id="s4">Platforms &amp; Subscriptions</h2><span class="count">6 tools</span></div>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="card-top"><h3>Handshake</h3><span class="badge badge-platform">Platform</span></div>
+          <p>Primary job board and employer relationship platform. Students post resumes, employers post jobs and schedule on-campus interviews. Also the source for employment outcome tracking.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://app.joinhandshake.com/edu" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>PathwayU</h3><span class="badge badge-platform">Platform</span></div>
+          <p>Career assessment platform used in ENS 101 and advising. Measures interests, values, personality (HEXACO), and workplace preferences. Results feed the Career Explorer Coach AI.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://ensign.pathwayu.com" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>VMock</h3><span class="badge badge-platform">Platform</span></div>
+          <p>Automated resume scoring and line-by-line feedback. Students submit resumes before appointments to reduce formatting review time and shift that work to the platform.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://www.vmock.com" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>PeopleGrove / Ensign Connect</h3><span class="badge badge-platform">Platform</span></div>
+          <p>Alumni mentoring and networking platform. Part of the CES shared hub (75,000+ alumni across BYU, BYU-Idaho, BYU-Hawaii, and Ensign). Used in career exploration and informational interview prep.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://connect.ensign.edu" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Big Interview</h3><span class="badge badge-platform">Platform</span></div>
+          <p>Self-paced video interview practice and coaching platform. Used for additional practice outside appointment hours and asynchronous mock interview submissions.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://ensign.biginterview.com" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Calendly</h3><span class="badge badge-platform">Platform</span></div>
+          <p>Appointment scheduling router. Students directed by service type, format (in-person or Zoom), and major. The same routing model was adopted by Academic Advising and Student Success.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://calendly.com/ensigncareers" target="_blank">Open &#8599;</a></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Automations -->
+    <section class="section" aria-labelledby="s5">
+      <div class="section-head"><h2 id="s5">Process Automation</h2><span class="count">5 flows</span></div>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="card-top"><h3>Internship Approval Workflow</h3><span class="badge badge-auto">Power Automate</span></div>
+          <p>Intake, routing, and status tracking for internship approvals. Replaced Smartsheet. Raised employer agreement compliance from 30% to 100% and eliminated a $1,500 annual license cost.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://make.powerautomate.com" target="_blank">Power Automate &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>CAR 398 Exception Request Routing</h3><span class="badge badge-auto">Power Automate</span></div>
+          <p>Automated approval routing and status tracking for CAR 398 exception requests. Replaced manual email-based routing.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://make.powerautomate.com" target="_blank">Power Automate &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Immersive Learning Exception Approvals</h3><span class="badge badge-auto">Power Automate</span></div>
+          <p>Approval workflow for Immersive Learning exception applications. Standardized intake and multi-step sign-off.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://make.powerautomate.com" target="_blank">Power Automate &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>CAR 201 Mock Interview Scheduling</h3><span class="badge badge-auto">Power Automate</span></div>
+          <p>Connects student self-scheduling to mentor grading and feedback delivery in one flow. Replaces email coordination for the CAR 201 final mock interview.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://make.powerautomate.com" target="_blank">Power Automate &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>SARA / OOSLP Data Collection</h3><span class="badge badge-auto">Power Automate</span></div>
+          <p>Automated data collection and annual report generation for SARA and OOSLP compliance. Replaced a manual multi-system compilation process.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://make.powerautomate.com" target="_blank">Power Automate &#8599;</a></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Reporting -->
+    <section class="section" aria-labelledby="s6">
+      <div class="section-head"><h2 id="s6">Reporting &amp; Data</h2><span class="count">2 tools</span></div>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="card-top"><h3>Career Services KPI Dashboard</h3><span class="badge badge-data">Power BI</span></div>
+          <p>Measures all KPIs reported to senior leadership: appointments, event attendance, student coverage, employer engagement, and placement rates. Requires Ensign login.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://app.powerbi.com/groups/me/apps/697bb457-eebe-4571-b87a-2fa913e3ec44/reports/3bfc6049-939e-43f8-ae79-abb9b600e09e/ReportSectionc794d6af48aa2111b528?experience=power-bi" target="_blank">Open Dashboard &#8599;</a></div>
+        </div>
+
+        <div class="card">
+          <div class="card-top"><h3>Zoom Session Capture</h3><span class="badge badge-data">Zoom AI</span></div>
+          <p>Automatic recording and AI-generated summaries for career mentoring sessions using capability already included in the college's Zoom license. Mentors use summaries for session notes; supervisors use recordings for training review.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://ensigncollege.zoom.us" target="_blank">Zoom Dashboard &#8599;</a></div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <span>Career Services &mdash; Ensign College &nbsp;&middot;&nbsp; <a href="mailto:careerservices@ensign.edu">careerservices@ensign.edu</a> &nbsp;&middot;&nbsp; 801-524-1925</span>
+      <span><a href="/projects">Full project history &#8599;</a></span>
+    </footer>
+
+  </main>
+</body>
+</html>
