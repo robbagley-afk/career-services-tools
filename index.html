@@ -35,6 +35,7 @@
     .grid { display: grid; gap: .85rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
     .grid-2 { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
     .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1rem; gap: .3rem; }
+    .card-highlight { background: #f7fdfa; border-color: #86efac; box-shadow: 0 6px 20px rgba(0,92,59,.12); }
     .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: .5rem; margin-bottom: .15rem; }
     .card h3 { margin: 0; font-size: 1rem; color: var(--green); line-height: 1.3; flex: 1; }
     .badge { flex-shrink: 0; display: inline-block; padding: .18rem .55rem; border-radius: 99px; font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
@@ -134,7 +135,7 @@
 
     <!-- AI Agents - Mentor/Staff -->
     <section class="section" aria-labelledby="s2">
-      <div class="section-head"><h2 id="s2">AI Agents &mdash; Mentor &amp; Staff</h2><span class="count">7 tools</span></div>
+      <div class="section-head"><h2 id="s2">AI Agents &mdash; Mentor &amp; Staff</h2><span class="count">8 tools</span></div>
       <div class="grid">
 
         <div class="card">
@@ -162,9 +163,15 @@
         </div>
 
         <div class="card">
-          <div class="card-top"><h3>Mentor Resume Coach v1.2 &ndash; Hybrid</h3><span class="badge badge-pilot">Pilot</span></div>
+          <div class="card-top"><h3>Resume Coach Mentor - 1.2</h3><span class="badge badge-pilot">Pilot</span></div>
           <p>Mentor-facing resume and cover-letter coaching with a two-stage local Qwen pipeline. The 14B model extracts sourced facts and placeholders; the 30B model selects constrained style changes; deterministic rendering and DiffGuard prevent factual mutation.</p>
-          <div class="card-actions"><span class="btn btn-dim">Protected deployment pending</span></div>
+          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-resume/" target="_blank">Open 1.2 &#8599;</a></div>
+        </div>
+
+        <div class="card card-highlight">
+          <div class="card-top"><h3>Resume Coach Mentor - 1.3</h3><span class="badge badge-live">Live</span></div>
+          <p>Section-by-section Socratic coaching suite with Superdesign v4 sticky review layout, VMock score band calibration, structured feedback scoping, and multi-session mentor note generation.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://resume-coach-ai-ten.vercel.app/" target="_blank">Open 1.3 &#8599;</a></div>
         </div>
 
         <div class="card">
