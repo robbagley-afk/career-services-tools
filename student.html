@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Career Mentor Tools - Beginner | Ensign College</title>
+  <title>Student Career &amp; AI Tools | Ensign College</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='12' height='12' x='3' y='3' rx='3' fill='%2310b981'/%3E%3Crect width='12' height='12' x='17' y='3' rx='3' fill='%2334d399'/%3E%3Crect width='12' height='12' x='3' y='17' rx='3' fill='%23fbbf24'/%3E%3Crect width='12' height='12' x='17' y='17' rx='3' fill='%2310b981'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -31,6 +31,7 @@
     .nav-btn.active { background: var(--green); color: #fff; border-color: var(--green); font-weight: 700; box-shadow: 0 2px 8px rgba(0,92,59,.2); }
     .nav-student { margin-left: auto; border-color: #cbd5e1; color: #4338ca; }
     .nav-student:hover { background: #eef2ff; border-color: #6366f1; color: #312e81; }
+    .nav-student.active { background: #4338ca; color: #fff; border-color: #4338ca; font-weight: 700; box-shadow: 0 2px 8px rgba(67,56,202,.25); }
     .page-header { border-left: 6px solid var(--gold); padding: .4rem 0 .4rem 1.2rem; margin-bottom: 2rem; }
     .page-header h1 { margin: 0; color: var(--green); font-size: clamp(1.8rem, 4.5vw, 2.75rem); letter-spacing: -0.02em; }
     .page-header p { margin: .5rem 0 0; color: var(--muted); max-width: 52rem; }
@@ -49,8 +50,6 @@
     .badge-pilot  { background: #fef9c3; color: #854d0e; }
     .badge-internal { background: #e0e7ff; color: #3730a3; }
     .badge-platform { background: var(--gold-light); color: #7c5c00; }
-    .badge-auto   { background: #f3e8ff; color: #6b21a8; }
-    .badge-data   { background: #e0f2fe; color: #0c4a6e; }
     .card-badges { display: flex; align-items: center; gap: .35rem; flex-shrink: 0; }
     .version-tag {
       display: inline-block;
@@ -128,8 +127,8 @@
       padding-left: .5rem;
     }
 
-    .mentor-note { background: var(--gold-light); border: 1px solid #f0d880; border-radius: var(--radius); padding: .85rem 1.1rem; font-size: .875rem; color: #5c4500; margin-bottom: 2rem; }
-    .mentor-note strong { color: #3a2c00; }
+    .welcome-note { background: var(--green-light); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: .85rem 1.1rem; font-size: .875rem; color: var(--green-deep); margin-bottom: 2rem; }
+    .welcome-note strong { color: #064e3b; }
     footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; align-items: center; }
     footer a { color: var(--green); text-decoration: none; font-weight: 600; }
     @media (max-width: 640px) {
@@ -153,66 +152,36 @@
   <main>
 
     <nav class="dashboard-nav" aria-label="Dashboard views">
-      <a href="beginner.html" class="nav-btn active" id="nav-beginner">🌱 Career Mentor Tools &mdash; Beginner</a>
+      <a href="beginner.html" class="nav-btn" id="nav-beginner">🌱 Career Mentor Tools &mdash; Beginner</a>
       <a href="index.html" class="nav-btn" id="nav-experienced">🧭 Career Mentor Tools &mdash; Experienced</a>
-      <a href="student.html" class="nav-btn nav-student" id="nav-student">🎓 Student-Only Dashboard &rarr;</a>
+      <a href="student.html" class="nav-btn nav-student active" id="nav-student">🎓 Student-Only Dashboard</a>
     </nav>
 
     <header class="page-header">
-      <h1>Career Mentor Tools &mdash; Beginner</h1>
-      <p>Curated starter dashboard for new Ensign College Career Mentors. Access your core appointment workflows, student readiness lookup, and coaching tools.</p>
+      <h1>Student Career &amp; AI Tools</h1>
+      <p>Official interactive AI coaches, career design tools, and career platforms designed for Ensign College students.</p>
     </header>
 
-    <div class="mentor-note">
-      <strong>New Mentor Checklist:</strong> For ENS 101 appointments, start with <strong>Student Readiness Hub</strong> to verify setup, open <strong>Ensign 101 Appt</strong> to guide the conversation, and use <strong>Resume Coach - MENTOR</strong> or <strong>Ensign Resume Tutor</strong> for resume sessions.
+    <div class="welcome-note">
+      <strong>Welcome, Ensign Students!</strong> Free, 24/7 AI-powered coaching to help you find your direction, polish your resume, practice interviews, and land internships.
     </div>
 
-    <!-- Core Beginner Mentor Tools -->
-    <section class="section" aria-labelledby="s1">
-      <div class="section-head"><h2 id="s1">Essential Mentor Tools</h2><span class="count">5 tools</span></div>
+    <!-- 1. RESUME, INTERNSHIP & INTERVIEW TOOLS -->
+    <section class="section" aria-labelledby="prep-tools">
+      <div class="section-head">
+        <h2 id="prep-tools">Resumes, Internships &amp; Interviews</h2>
+        <span class="count">5 tools</span>
+      </div>
       <div class="grid">
 
-        <div class="card" data-app-id="readiness-hub">
+        <div class="card" data-app-id="resume-coach">
           <div class="card-top">
-            <h3>Student Readiness Hub</h3>
+            <h3>Resume Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
           </div>
-          <p>Instant student verification across 3,300+ records. Check Ensign Connect signup, PathwayU completion, and VMock account status before or during appointments.</p>
+          <p>Socratic resume coaching &mdash; asks targeted questions to help you uncover your accomplishments, quantify your impact, and apply the CAR formula.</p>
           <div class="card-actions">
-            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/readiness-hub/" target="_blank">Open Hub &#8599;</a>
-          </div>
-        </div>
-
-        <div class="card" data-app-id="ens101">
-          <div class="card-top">
-            <h3>Ensign 101 Appt</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Guided 5-stage workflow for ENS 101 mentor appointments: Begin, Ensign Connect Setup, Internship Planning, Career Direction, and Mentor Copilot notes.</p>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/ens101/" target="_blank">Open Appt Desk &#8599;</a>
-          </div>
-        </div>
-
-        <div class="card" data-app-id="mentor-explorer">
-          <div class="card-top">
-            <h3>Career Explorer Coach - MENTOR</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Mentor-facing PathwayU assessment interpretation companion. Helps guide exploratory students through interests, values, and Ensign College degree pathways.</p>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-explorer/" target="_blank">Open Coach &#8599;</a>
-          </div>
-        </div>
-
-        <div class="card card-highlight" data-app-id="resume-coach-mentor-live">
-          <div class="card-top">
-            <h3>Resume Coach - MENTOR</h3>
-            <div class="card-badges"><span class="version-tag">v1.3</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Socratic section-by-section resume coaching suite with Superdesign layout, VMock score band calibration, and multi-session note generation.</p>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://resume-coach-ai-ten.vercel.app/" target="_blank">Open App &#8599;</a>
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/resume/" target="_blank">Open Resume Coach &#8599;</a>
           </div>
         </div>
 
@@ -227,12 +196,92 @@
           </div>
         </div>
 
+        <div class="card" data-app-id="resume-improver">
+          <div class="card-top">
+            <h3>Resume Improver</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Instant bullet-point rewriter. Paste a weak bullet to get clear, high-impact revisions formatted with strong action verbs and metrics.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/resume-improver/" target="_blank">Open Resume Improver &#8599;</a>
+          </div>
+        </div>
+
+        <div class="card" data-app-id="interview-practice">
+          <div class="card-top">
+            <h3>Interview Practice</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Realistic mock interview practice. Answer behavioral questions with STAR-method feedback, real-time tips, and speech microphone support.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/interview/" target="_blank">Practice Interviewing &#8599;</a>
+          </div>
+        </div>
+
+        <div class="card" data-app-id="internship-expert">
+          <div class="card-top">
+            <h3>Internship Expert</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Instant answers on Ensign internship registration, CAR 298/398 credit requirements, CPT work authorization, and employer agreements.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/internship/" target="_blank">Ask Internship Question &#8599;</a>
+          </div>
+        </div>
+
+        <div class="card" data-app-id="career-fair">
+          <div class="card-top">
+            <h3>Career Fair Coach</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Perfect your 30-second elevator pitch, research attending employers, and practice recruiter conversations before the Career Fair.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/career-fair/" target="_blank">Prepare Your Pitch &#8599;</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Career Platform Links -->
-    <section class="section" aria-labelledby="s4">
-      <div class="section-head"><h2 id="s4">Career Platform Links</h2><span class="count">5 platforms</span></div>
+    <!-- 2. CAREER DESIGN & EXPLORATION -->
+    <section class="section" aria-labelledby="explore-tools">
+      <div class="section-head">
+        <h2 id="explore-tools">Career Exploration &amp; Networking</h2>
+        <span class="count">2 tools</span>
+      </div>
+      <div class="grid">
+
+        <div class="card" data-app-id="major-explorer">
+          <div class="card-top">
+            <h3>Career &amp; Major Explorer Coach</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Connects your PathwayU assessment results (interests, personality, values) to Ensign College majors, certificates, and real-world career paths.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/major-explorer/" target="_blank">Explore Majors &amp; Careers &#8599;</a>
+          </div>
+        </div>
+
+        <div class="card" data-app-id="academic-advisor">
+          <div class="card-top">
+            <h3>Academic Advisor</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Source-guided Ensign College program and course-planning support. Grounded in official program guides.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/advisor/" target="_blank">Open Academic Advisor &#8599;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. PLATFORMS & APPOINTMENTS -->
+    <section class="section" aria-labelledby="student-platforms">
+      <div class="section-head">
+        <h2 id="student-platforms">Career Platform Links</h2>
+        <span class="count">5 platforms</span>
+      </div>
       <div class="platform-grid">
 
         <a class="platform-card" href="https://app.joinhandshake.com/edu" target="_blank" rel="noopener">
@@ -241,7 +290,7 @@
           </div>
           <div class="platform-details">
             <h3>Handshake</h3>
-            <p>Job board, campus interviews, employer network, and outcome tracking.</p>
+            <p>Official job and internship board for Ensign College students.</p>
           </div>
           <div class="platform-arrow">&#8599;</div>
         </a>
@@ -251,8 +300,8 @@
             <img src="assets/icons/pathwayu.svg" alt="PathwayU" width="44" height="44">
           </div>
           <div class="platform-details">
-            <h3>Career Explorer Assessment</h3>
-            <p>PathwayU assessment (interests, values, HEXACO) feeding AI coach.</p>
+            <h3>PathwayU Assessment</h3>
+            <p>Assess your workplace values, interests, and personality traits.</p>
           </div>
           <div class="platform-arrow">&#8599;</div>
         </a>
@@ -263,7 +312,7 @@
           </div>
           <div class="platform-details">
             <h3>VMock</h3>
-            <p>24/7 automated resume formatting and benchmarked line scoring.</p>
+            <p>Instant 24/7 automated resume formatting and benchmark scoring.</p>
           </div>
           <div class="platform-arrow">&#8599;</div>
         </a>
@@ -273,8 +322,8 @@
             <img src="assets/icons/peoplegrove.svg" alt="Ensign Connect" width="44" height="44">
           </div>
           <div class="platform-details">
-            <h3>PeopleGrove / Ensign Connect</h3>
-            <p>CES alumni mentoring network (75,000+ alumni across BYU system).</p>
+            <h3>Ensign Connect</h3>
+            <p>Connect with 75,000+ alumni across the CES mentoring network.</p>
           </div>
           <div class="platform-arrow">&#8599;</div>
         </a>
@@ -284,8 +333,8 @@
             <img src="assets/icons/calendly.svg" alt="Calendly" width="44" height="44">
           </div>
           <div class="platform-details">
-            <h3>Calendly</h3>
-            <p>Career appointment scheduling router by service, major, and format.</p>
+            <h3>Meet with a Career Mentor</h3>
+            <p>Schedule a 1-on-1 personalized coaching appointment with a career mentor.</p>
           </div>
           <div class="platform-arrow">&#8599;</div>
         </a>
@@ -295,7 +344,10 @@
 
     <footer>
       <span>Career Services &mdash; Ensign College &nbsp;&middot;&nbsp; <a href="mailto:careerservices@ensign.edu">careerservices@ensign.edu</a> &nbsp;&middot;&nbsp; 801-524-1925</span>
-      <span><a href="projects.html">Full project history &#8599;</a></span>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="index.html">Career Mentor Tools &rarr;</a>
+        <a href="projects.html">Full project history &#8599;</a>
+      </div>
     </footer>
 
   </main>
