@@ -34,6 +34,8 @@
     .nav-btn.active { background: var(--green); color: #fff; border-color: var(--green); font-weight: 700; box-shadow: 0 2px 8px rgba(0,92,59,.2); }
     .nav-student { margin-left: auto; border-color: #cbd5e1; color: #4338ca; }
     .nav-student:hover { background: #eef2ff; border-color: #6366f1; color: #312e81; }
+    .nav-request { border-color: #f59e0b; color: #92400e; background: #fffbeb; font-weight: 700; }
+    .nav-request:hover { background: #fef3c7; border-color: #d97706; color: #78350f; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(245,158,11,.2); }
     .page-header { border-left: 6px solid var(--gold); padding: .4rem 0 .4rem 1.2rem; margin-bottom: 2rem; }
     .page-header h1 { margin: 0; color: var(--green); font-size: clamp(1.8rem, 4.5vw, 2.75rem); letter-spacing: -0.02em; }
     .page-header p { margin: .5rem 0 0; color: var(--muted); max-width: 52rem; }
@@ -160,6 +162,7 @@
     <nav class="dashboard-nav" aria-label="Dashboard views">
       <a href="beginner.html" class="nav-btn active" id="nav-beginner">🌱 Mentor Tools &mdash; BEGINNING</a>
       <a href="index.html" class="nav-btn" id="nav-experienced">🧭 Mentor Tools &mdash; EXPERIENCED</a>
+      <a href="https://teams.microsoft.com/l/app/?titleId=T_3bcb2c8e-11f2-d741-b68c-39809c1717c9" target="_blank" rel="noopener" class="nav-btn nav-request" id="nav-career-app-improvement">💡 Career App Improvement Request &#8599;</a>
       <a href="student.html" class="nav-btn nav-student" id="nav-student">🎓 Student-Only Dashboard &rarr;</a>
     </nav>
 
@@ -174,8 +177,19 @@
 
     <!-- Core Beginner Mentor Tools -->
     <section class="section" aria-labelledby="s1">
-      <div class="section-head"><h2 id="s1">Essential Mentor Tools</h2><span class="count">5 tools</span></div>
+      <div class="section-head"><h2 id="s1">Essential Mentor Tools</h2><span class="count">6 tools</span></div>
       <div class="grid">
+
+        <div class="card card-mentor" data-app-id="career-app-improvement">
+          <div class="card-top">
+            <h3>Career App Improvement Request</h3>
+            <div class="card-badges"><span class="badge badge-internal">Copilot Studio</span></div>
+          </div>
+          <p>Submit bug reports, feature enhancements, and suggestions for all Career Services AI apps and dashboards directly to the Copilot Studio intake agent.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://teams.microsoft.com/l/app/?titleId=T_3bcb2c8e-11f2-d741-b68c-39809c1717c9" target="_blank" rel="noopener">Career App Improvement Request &#8599;</a>
+          </div>
+        </div>
 
         <div class="card card-mentor" data-app-id="readiness-hub">
           <div class="card-top">
