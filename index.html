@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Career Mentor Tools - Experienced | Ensign College</title>
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon-experienced.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2300412a'/%3E%3Ccircle cx='16' cy='16' r='11' stroke='%23fbbf24' stroke-width='1.5' fill='none'/%3E%3Cpath d='M16 5L18.5 13.5L27 16L18.5 18.5L16 27L13.5 18.5L5 16L13.5 13.5Z' fill='%23fbbf24'/%3E%3Cpath d='M16 8L17.5 14.5L24 16L17.5 17.5L16 24L14.5 17.5L8 16L14.5 14.5Z' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23005c3b'/%3E%3C/svg%3E">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-experienced.png">
   <link rel="apple-touch-icon" sizes="192x192" href="/assets/icons/favicon-experienced-192.png">
   <link rel="shortcut icon" href="/assets/icons/favicon-experienced.ico">
@@ -44,6 +44,8 @@
     .grid { display: grid; gap: .85rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
     .grid-2 { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
     .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1rem; gap: .3rem; }
+    .card-mentor { background: #ffffff; border-color: var(--line); }
+    .card-student { background: #eef7f2; border-color: #a7f3d0; box-shadow: 0 4px 16px rgba(0,92,59,.07); }
     .card-highlight { background: #f7fdfa; border-color: #86efac; box-shadow: 0 6px 20px rgba(0,92,59,.12); }
     .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: .5rem; margin-bottom: .15rem; }
     .card h3 { margin: 0; font-size: 1rem; color: var(--green); line-height: 1.3; flex: 1; }
@@ -170,12 +172,92 @@
       <strong>For mentors:</strong> Tools marked <span style="background:#dcfce7;color:#166534;padding:.1rem .4rem;border-radius:99px;font-size:.75rem;font-weight:700;">Live</span> are open now. Tools marked <span style="background:#fef9c3;color:#854d0e;padding:.1rem .4rem;border-radius:99px;font-size:.75rem;font-weight:700;">Pilot</span> are in limited testing.
     </div>
 
-    <!-- AI Agents - Student-Facing -->
+    <!-- AI Agents - Mentor/Staff -->
     <section class="section" aria-labelledby="s1">
-      <div class="section-head"><h2 id="s1">AI Agents &mdash; Student-Facing</h2><span class="count">7 tools</span></div>
+      <div class="section-head"><h2 id="s1">AI Agents &mdash; Mentor &amp; Staff</h2><span class="count">8 tools</span></div>
       <div class="grid">
 
-        <div class="card" data-app-id="major-explorer">
+        <div class="card card-mentor" data-app-id="ens101">
+          <div class="card-top">
+            <h3>ENS 101 Mentor Desk</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Appointment 1a workspace for career mentors: guided 5-stage workflow (Begin, Ensign Connect, Internship Plan, Career Direction, Complete), interactive checklist, non-sensitive notes, copyable summary, and Mentor Copilot.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/ens101/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card card-mentor" data-app-id="linkedin-brewcoach">
+          <div class="card-top">
+            <h3>LinkedIn Brew360 Coach</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Coaches mentors through LinkedIn profile optimization based on the Brew360 algorithm &mdash; Topic DNA, recruiter visibility, C-A-R bullets, and a 30-day execution plan. Upload the student's PDF profile to get started.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://brewcoach-for-linkedin.vercel.app/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card card-mentor" data-app-id="mentor-explorer">
+          <div class="card-top">
+            <h3>Mentor Career Explorer Coach</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Mentor-facing version of the Career Explorer. Same PathwayU interpretation engine with a coaching-oriented interface for guiding a student through the conversation.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-explorer/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card card-mentor" data-app-id="internship-expert">
+          <div class="card-top">
+            <h3>Internship Expert</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Official-source internship process and CPT guidance: registration, credit requirements, employer agreements, and work authorization rules.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/internship/" target="_blank">Open &#8599;</a></div>
+        </div>
+
+        <div class="card card-mentor" data-app-id="resume-coach-mentor-pilot">
+          <div class="card-top">
+            <h3>Resume Coach Mentor</h3>
+            <div class="card-badges"><span class="version-tag">v1.2</span><span class="badge badge-pilot">Pilot</span></div>
+          </div>
+          <p>Mentor-facing resume and cover-letter coaching with a two-stage local Qwen pipeline. The 14B model extracts sourced facts and placeholders; the 30B model selects constrained style changes; deterministic rendering and DiffGuard prevent factual mutation.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-resume/" target="_blank">Open App &#8599;</a></div>
+        </div>
+
+        <div class="card card-mentor card-highlight" data-app-id="resume-coach-mentor-live">
+          <div class="card-top">
+            <h3>Resume Coach Mentor</h3>
+            <div class="card-badges"><span class="version-tag">v1.3</span><span class="badge badge-live">Live</span></div>
+          </div>
+          <p>Section-by-section Socratic coaching suite with Superdesign v4 sticky review layout, VMock score band calibration, structured feedback scoping, and multi-session mentor note generation.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="https://resume-coach-ai-ten.vercel.app/" target="_blank">Open App &#8599;</a></div>
+        </div>
+
+        <div class="card card-mentor">
+          <div class="card-top">
+            <h3>Mentor Resume Assistant</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-internal">Internal</span></div>
+          </div>
+          <p>Gives volunteer staff expert-level resume feedback grounded in Ensign resume template standards and current best practice. Built in Copilot Studio.</p>
+          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
+        </div>
+
+        <div class="card card-mentor">
+          <div class="card-top">
+            <h3>PBWE Instructional Coach</h3>
+            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-internal">Internal</span></div>
+          </div>
+          <p>Assists student TAs in coaching and grading teams in the Project-Based Work Experience course. Built in Copilot Studio.</p>
+          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AI Agents - Student-Facing -->
+    <section class="section" aria-labelledby="s2">
+      <div class="section-head"><h2 id="s2">AI Agents &mdash; Student-Facing</h2><span class="count">7 tools</span></div>
+      <div class="grid">
+
+        <div class="card card-student" data-app-id="major-explorer">
           <div class="card-top">
             <h3>Career &amp; Major Explorer Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -187,7 +269,7 @@
           </div>
         </div>
 
-        <div class="card" data-app-id="career-fair">
+        <div class="card card-student" data-app-id="career-fair">
           <div class="card-top">
             <h3>Career Fair Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -196,7 +278,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/career-fair/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card" data-app-id="resume-coach">
+        <div class="card card-student" data-app-id="resume-coach">
           <div class="card-top">
             <h3>Resume Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -205,7 +287,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/resume/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card" data-app-id="ensign-resume-tutor">
+        <div class="card card-student" data-app-id="ensign-resume-tutor">
           <div class="card-top">
             <h3>Ensign Resume Tutor</h3>
             <div class="card-badges"><span class="version-tag">v0.8</span><span class="badge badge-live">Live</span></div>
@@ -214,7 +296,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://resume-coach-ai-ten.vercel.app/tutor" target="_blank">Open Tutor &#8599;</a></div>
         </div>
 
-        <div class="card" data-app-id="resume-improver">
+        <div class="card card-student" data-app-id="resume-improver">
           <div class="card-top">
             <h3>Resume Improver</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -223,7 +305,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/resume-improver/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card card-student">
           <div class="card-top">
             <h3>Interview Practice</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -232,93 +314,13 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/interview/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card card-student">
           <div class="card-top">
             <h3>Academic Advisor</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
           </div>
           <p>Source-guided Ensign College program and course-planning support. Grounded in official program guides. Does not store student records or chat history.</p>
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/advisor/" target="_blank">Open &#8599;</a></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- AI Agents - Mentor/Staff -->
-    <section class="section" aria-labelledby="s2">
-      <div class="section-head"><h2 id="s2">AI Agents &mdash; Mentor &amp; Staff</h2><span class="count">8 tools</span></div>
-      <div class="grid">
-
-        <div class="card" data-app-id="ens101">
-          <div class="card-top">
-            <h3>ENS 101 Mentor Desk</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Appointment 1a workspace for career mentors: guided 5-stage workflow (Begin, Ensign Connect, Internship Plan, Career Direction, Complete), interactive checklist, non-sensitive notes, copyable summary, and Mentor Copilot.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/ens101/" target="_blank">Open &#8599;</a></div>
-        </div>
-
-        <div class="card" data-app-id="linkedin-brewcoach">
-          <div class="card-top">
-            <h3>LinkedIn Brew360 Coach</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Coaches mentors through LinkedIn profile optimization based on the Brew360 algorithm &mdash; Topic DNA, recruiter visibility, C-A-R bullets, and a 30-day execution plan. Upload the student's PDF profile to get started.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://brewcoach-for-linkedin.vercel.app/" target="_blank">Open &#8599;</a></div>
-        </div>
-
-        <div class="card" data-app-id="mentor-explorer">
-          <div class="card-top">
-            <h3>Mentor Career Explorer Coach</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Mentor-facing version of the Career Explorer. Same PathwayU interpretation engine with a coaching-oriented interface for guiding a student through the conversation.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-explorer/" target="_blank">Open &#8599;</a></div>
-        </div>
-
-        <div class="card" data-app-id="internship-expert">
-          <div class="card-top">
-            <h3>Internship Expert</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Official-source internship process and CPT guidance: registration, credit requirements, employer agreements, and work authorization rules.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/internship/" target="_blank">Open &#8599;</a></div>
-        </div>
-
-        <div class="card" data-app-id="resume-coach-mentor-pilot">
-          <div class="card-top">
-            <h3>Resume Coach Mentor</h3>
-            <div class="card-badges"><span class="version-tag">v1.2</span><span class="badge badge-pilot">Pilot</span></div>
-          </div>
-          <p>Mentor-facing resume and cover-letter coaching with a two-stage local Qwen pipeline. The 14B model extracts sourced facts and placeholders; the 30B model selects constrained style changes; deterministic rendering and DiffGuard prevent factual mutation.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-resume/" target="_blank">Open App &#8599;</a></div>
-        </div>
-
-        <div class="card card-highlight" data-app-id="resume-coach-mentor-live">
-          <div class="card-top">
-            <h3>Resume Coach Mentor</h3>
-            <div class="card-badges"><span class="version-tag">v1.3</span><span class="badge badge-live">Live</span></div>
-          </div>
-          <p>Section-by-section Socratic coaching suite with Superdesign v4 sticky review layout, VMock score band calibration, structured feedback scoping, and multi-session mentor note generation.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://resume-coach-ai-ten.vercel.app/" target="_blank">Open App &#8599;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Mentor Resume Assistant</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-internal">Internal</span></div>
-          </div>
-          <p>Gives volunteer staff expert-level resume feedback grounded in Ensign resume template standards and current best practice. Built in Copilot Studio.</p>
-          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>PBWE Instructional Coach</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-internal">Internal</span></div>
-          </div>
-          <p>Assists student TAs in coaching and grading teams in the Project-Based Work Experience course. Built in Copilot Studio.</p>
-          <div class="card-actions"><span class="btn btn-dim">Ensign Copilot only</span></div>
         </div>
 
       </div>
