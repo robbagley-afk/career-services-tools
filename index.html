@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Career Services Tools | Ensign College</title>
+  <title>Career Mentor Tools - Experienced | Ensign College</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='12' height='12' x='3' y='3' rx='3' fill='%2310b981'/%3E%3Crect width='12' height='12' x='17' y='3' rx='3' fill='%2334d399'/%3E%3Crect width='12' height='12' x='3' y='17' rx='3' fill='%23fbbf24'/%3E%3Crect width='12' height='12' x='17' y='17' rx='3' fill='%2310b981'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -25,6 +25,12 @@
     * { box-sizing: border-box; }
     body { margin: 0; font: 16px/1.6 Inter, ui-sans-serif, system-ui, sans-serif; color: var(--ink); background: var(--paper); }
     main { width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    .dashboard-nav { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .nav-btn { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem 1rem; border-radius: 99px; font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--white); transition: all 140ms ease; }
+    .nav-btn:hover { color: var(--ink); border-color: var(--green); transform: translateY(-1px); }
+    .nav-btn.active { background: var(--green); color: #fff; border-color: var(--green); font-weight: 700; box-shadow: 0 2px 8px rgba(0,92,59,.2); }
+    .nav-student { margin-left: auto; border-color: #cbd5e1; color: #4338ca; }
+    .nav-student:hover { background: #eef2ff; border-color: #6366f1; color: #312e81; }
     .page-header { border-left: 6px solid var(--gold); padding: .4rem 0 .4rem 1.2rem; margin-bottom: 2rem; }
     .page-header h1 { margin: 0; color: var(--green); font-size: clamp(1.8rem, 4.5vw, 2.75rem); letter-spacing: -0.02em; }
     .page-header p { margin: .5rem 0 0; color: var(--muted); max-width: 52rem; }
@@ -68,32 +74,93 @@
     .btn-secondary { background: var(--green-light); color: var(--green-deep); }
     .btn-dim { background: #f0f0f0; color: var(--muted); font-weight: 600; }
     .btn-dim:hover { filter: none; transform: none; }
+    .btn-version { font-weight: 500; opacity: 0.9; font-size: 0.8em; }
+
+    /* Platform Links with Brand Icons */
+    .platform-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .platform-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: all 160ms ease;
+    }
+    .platform-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--green);
+      box-shadow: 0 8px 24px rgba(0, 92, 59, .14);
+    }
+    .platform-icon-wrap {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .platform-icon-wrap img, .platform-icon-wrap svg {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+    }
+    .platform-details { flex: 1; }
+    .platform-details h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .platform-details p {
+      margin: .2rem 0 0;
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .platform-arrow {
+      color: var(--green);
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding-left: .5rem;
+    }
+
     .mentor-note { background: var(--gold-light); border: 1px solid #f0d880; border-radius: var(--radius); padding: .85rem 1.1rem; font-size: .875rem; color: #5c4500; margin-bottom: 2rem; }
     .mentor-note strong { color: #3a2c00; }
     footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; align-items: center; }
     footer a { color: var(--green); text-decoration: none; font-weight: 600; }
     @media (max-width: 640px) {
       main { padding: 1.75rem 0 2.5rem; }
-      .grid, .grid-2 { grid-template-columns: 1fr; }
+      .grid, .grid-2, .platform-grid { grid-template-columns: 1fr; }
+      .nav-student { margin-left: 0; }
     }
   </style>
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <!-- Vercel Speed Insights -->
-    <script>
-      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-  </head>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
 <body>
   <main>
 
+    <nav class="dashboard-nav" aria-label="Dashboard views">
+      <a href="index.html" class="nav-btn active" id="nav-experienced">🧭 Career Mentor Tools &mdash; Experienced</a>
+      <a href="beginner.html" class="nav-btn" id="nav-beginner">🌱 Career Mentor Tools &mdash; Beginner</a>
+      <a href="https://mac-studio-2.tail299fc7.ts.net/student" class="nav-btn nav-student" id="nav-student" target="_blank" rel="noopener">🎓 Student-Only Dashboard &rarr;</a>
+    </nav>
+
     <header class="page-header">
-      <h1>Career Services Tools</h1>
-      <p>All AI agents, platforms, automations, and reporting tools used by Ensign College Career Services. For mentors and staff.</p>
+      <h1>Career Mentor Tools &mdash; Experienced</h1>
+      <p>Comprehensive portfolio of AI agents, platform integrations, automations, and reporting tools for experienced Ensign College Career Mentors and staff.</p>
     </header>
 
     <div class="mentor-note">
@@ -105,7 +172,7 @@
       <div class="section-head"><h2 id="s1">AI Agents &mdash; Student-Facing</h2><span class="count">7 tools</span></div>
       <div class="grid">
 
-        <div class="card">
+        <div class="card" data-app-id="major-explorer">
           <div class="card-top">
             <h3>Career &amp; Major Explorer Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -117,7 +184,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="career-fair">
           <div class="card-top">
             <h3>Career Fair Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -126,7 +193,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/career-fair/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="resume-coach">
           <div class="card-top">
             <h3>Resume Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -135,16 +202,16 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/resume/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="ensign-resume-tutor">
           <div class="card-top">
-            <h3>Resume Tutor</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+            <h3>Ensign Resume Tutor</h3>
+            <div class="card-badges"><span class="version-tag">v0.8</span><span class="badge badge-live">Live</span></div>
           </div>
           <p>Interactive, step-by-step resume and bullet writing tutor. Teaches students action verbs, quantifiable metrics, and CAR formatting before submitting for review.</p>
           <div class="card-actions"><a class="btn btn-primary" href="https://resume-coach-ai-ten.vercel.app/tutor" target="_blank">Open Tutor &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="resume-improver">
           <div class="card-top">
             <h3>Resume Improver</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -179,7 +246,7 @@
       <div class="section-head"><h2 id="s2">AI Agents &mdash; Mentor &amp; Staff</h2><span class="count">8 tools</span></div>
       <div class="grid">
 
-        <div class="card">
+        <div class="card" data-app-id="ens101">
           <div class="card-top">
             <h3>ENS 101 Mentor Desk</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -188,7 +255,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/ens101/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="linkedin-brewcoach">
           <div class="card-top">
             <h3>LinkedIn Brew360 Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -197,7 +264,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://brewcoach-for-linkedin.vercel.app/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="mentor-explorer">
           <div class="card-top">
             <h3>Mentor Career Explorer Coach</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -206,7 +273,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-explorer/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="internship-expert">
           <div class="card-top">
             <h3>Internship Expert</h3>
             <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
@@ -215,7 +282,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/internship/" target="_blank">Open &#8599;</a></div>
         </div>
 
-        <div class="card">
+        <div class="card" data-app-id="resume-coach-mentor-pilot">
           <div class="card-top">
             <h3>Resume Coach Mentor</h3>
             <div class="card-badges"><span class="version-tag">v1.2</span><span class="badge badge-pilot">Pilot</span></div>
@@ -224,7 +291,7 @@
           <div class="card-actions"><a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/mentor-resume/" target="_blank">Open App &#8599;</a></div>
         </div>
 
-        <div class="card card-highlight">
+        <div class="card card-highlight" data-app-id="resume-coach-mentor-live">
           <div class="card-top">
             <h3>Resume Coach Mentor</h3>
             <div class="card-badges"><span class="version-tag">v1.3</span><span class="badge badge-live">Live</span></div>
@@ -289,40 +356,65 @@
       </div>
     </section>
 
-    <!-- Platforms -->
+    <!-- Career Platform Links -->
     <section class="section" aria-labelledby="s4">
-      <div class="section-head"><h2 id="s4">Platforms &amp; Subscriptions</h2><span class="count">5 tools</span></div>
-      <div class="grid grid-2">
+      <div class="section-head"><h2 id="s4">Career Platform Links</h2><span class="count">5 platforms</span></div>
+      <div class="platform-grid">
 
-        <div class="card">
-          <div class="card-top"><h3>Handshake</h3><span class="badge badge-platform">Platform</span></div>
-          <p>Primary job board and employer relationship platform. Students post resumes, employers post jobs and schedule on-campus interviews. Also the source for employment outcome tracking.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://app.joinhandshake.com/edu" target="_blank">Open &#8599;</a></div>
-        </div>
+        <a class="platform-card" href="https://app.joinhandshake.com/edu" target="_blank" rel="noopener">
+          <div class="platform-icon-wrap">
+            <img src="assets/icons/handshake.svg" alt="Handshake" width="44" height="44">
+          </div>
+          <div class="platform-details">
+            <h3>Handshake</h3>
+            <p>Job board, campus interviews, employer network, and outcome tracking.</p>
+          </div>
+          <div class="platform-arrow">&#8599;</div>
+        </a>
 
-        <div class="card">
-          <div class="card-top"><h3>Career Explorer Assessment</h3><span class="badge badge-platform">Platform</span></div>
-          <p>Career assessment platform used in ENS 101 and advising. Measures interests, values, personality (HEXACO), and workplace preferences. Results feed the Career Explorer Coach AI.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://ensign.pathwayu.com" target="_blank">Open &#8599;</a></div>
-        </div>
+        <a class="platform-card" href="https://ensign.pathwayu.com" target="_blank" rel="noopener">
+          <div class="platform-icon-wrap">
+            <img src="assets/icons/pathwayu.svg" alt="PathwayU" width="44" height="44">
+          </div>
+          <div class="platform-details">
+            <h3>Career Explorer Assessment</h3>
+            <p>PathwayU assessment (interests, values, HEXACO) feeding AI coach.</p>
+          </div>
+          <div class="platform-arrow">&#8599;</div>
+        </a>
 
-        <div class="card">
-          <div class="card-top"><h3>VMock</h3><span class="badge badge-platform">Platform</span></div>
-          <p>Automated resume scoring and line-by-line feedback. Students submit resumes before appointments to reduce formatting review time and shift that work to the platform.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://www.vmock.com" target="_blank">Open &#8599;</a></div>
-        </div>
+        <a class="platform-card" href="https://www.vmock.com" target="_blank" rel="noopener">
+          <div class="platform-icon-wrap">
+            <img src="assets/icons/vmock.svg" alt="VMock" width="44" height="44">
+          </div>
+          <div class="platform-details">
+            <h3>VMock</h3>
+            <p>24/7 automated resume formatting and benchmarked line scoring.</p>
+          </div>
+          <div class="platform-arrow">&#8599;</div>
+        </a>
 
-        <div class="card">
-          <div class="card-top"><h3>PeopleGrove / Ensign Connect</h3><span class="badge badge-platform">Platform</span></div>
-          <p>Alumni mentoring and networking platform. Part of the CES shared hub (75,000+ alumni across BYU, BYU-Idaho, BYU-Hawaii, and Ensign). Used in career exploration and informational interview prep.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://connect.ensign.edu" target="_blank">Open &#8599;</a></div>
-        </div>
+        <a class="platform-card" href="https://connect.ensign.edu" target="_blank" rel="noopener">
+          <div class="platform-icon-wrap">
+            <img src="assets/icons/peoplegrove.svg" alt="Ensign Connect" width="44" height="44">
+          </div>
+          <div class="platform-details">
+            <h3>PeopleGrove / Ensign Connect</h3>
+            <p>CES alumni mentoring network (75,000+ alumni across BYU system).</p>
+          </div>
+          <div class="platform-arrow">&#8599;</div>
+        </a>
 
-        <div class="card">
-          <div class="card-top"><h3>Calendly</h3><span class="badge badge-platform">Platform</span></div>
-          <p>Appointment scheduling router. Students directed by service type, format (in-person or Zoom), and major. The same routing model was adopted by Academic Advising and Student Success.</p>
-          <div class="card-actions"><a class="btn btn-primary" href="https://calendly.com/ensigncareers" target="_blank">Open &#8599;</a></div>
-        </div>
+        <a class="platform-card" href="https://calendly.com/ensigncareers" target="_blank" rel="noopener">
+          <div class="platform-icon-wrap">
+            <img src="assets/icons/calendly.svg" alt="Calendly" width="44" height="44">
+          </div>
+          <div class="platform-details">
+            <h3>Calendly</h3>
+            <p>Career appointment scheduling router by service, major, and format.</p>
+          </div>
+          <div class="platform-arrow">&#8599;</div>
+        </a>
 
       </div>
     </section>
@@ -394,5 +486,6 @@
     </footer>
 
   </main>
+  <script src="versions.js"></script>
 </body>
 </html>
