@@ -95,6 +95,7 @@
     .card-actions { margin-top: .75rem; display: flex; flex-wrap: wrap; gap: .45rem; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; min-height: 44px; padding: .45rem .85rem; border-radius: 8px; font-size: 17px /* ECC: 17px floor */; font-weight: 700; text-decoration: none; text-align: center; max-width: 100%; transition: filter 130ms ease, transform 130ms ease; }
     .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .btn:active, .nav-btn:active { filter: brightness(0.92); transform: translateY(0); } /* ECC: pressed state */
     .btn:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
     .nav-btn { min-height: 44px; }
     @media (forced-colors: active) { .btn, .nav-btn, .platform-card, .card { border: 2px solid ButtonText; } .btn:focus-visible, a:focus-visible { outline-color: Highlight; } }
