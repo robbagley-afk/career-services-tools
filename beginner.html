@@ -12,12 +12,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
+  <!-- ECC: ces-*.css must load BEFORE the ecc-* files. ecc-ces-compat.css re-points the --ces-* variables and only works if it comes last -->
+  <link rel="stylesheet" href="ces-tokens.css">
+  <link rel="stylesheet" href="ces-components.css">
   <link rel="stylesheet" href="ecc-tokens.css" />
   <link rel="stylesheet" href="ecc-ces-compat.css" />
   <link rel="stylesheet" href="ecc-components.base.css" />
   <link rel="stylesheet" href="ecc-app.css" />
-  <link rel="stylesheet" href="ces-tokens.css">
-  <link rel="stylesheet" href="ces-components.css">
 
   <!-- Vercel Web Analytics -->
   <script>
