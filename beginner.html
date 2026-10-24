@@ -46,7 +46,7 @@
     }
     * { box-sizing: border-box; }
     body { margin: 0; font: var(--text-body)/var(--leading-body) var(--font-sans); color: var(--ink); background: var(--paper); }
-    main { width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    main { max-width: 100vw; margin: 0; padding: 2.5rem var(--gutter) 3rem; } /* ECC: fill to the gutter */
     .dashboard-nav { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .nav-btn { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem 1rem; border-radius: 99px; font-size: 17px /* ECC: 17px floor */; font-weight: 600; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--white); transition: all 140ms ease; }
     .nav-btn:hover { color: var(--ink); border-color: var(--green); transform: translateY(-1px); }
@@ -227,10 +227,10 @@
 
         <div class="card card-mentor" data-app-id="ens101">
           <div class="card-top">
-            <h3>Ensign 101 Appt</h3>
-            <div class="card-badges"><span class="version-tag">v1.0</span><span class="badge badge-live">Live</span></div>
+            <h3>ENS 101 Guide</h3>
+            <div class="card-badges"><span class="version-tag">v1.5</span><span class="badge badge-live">Live</span></div>
           </div>
-          <p>Guided 5-stage workflow for ENS 101 mentor appointments: Begin, Ensign Connect Setup, Internship Planning, Career Direction, and Mentor Copilot notes.</p>
+          <p>Four-step guide for ENS 101 appointments: look up the student, begin the appointment, plan and wrap up, and log the note in Civitas. Checklist, color-coded 1-10 confidence keys, notes, a ready-to-paste Civitas note and Mentor AI.</p>
           <div class="card-actions">
             <a class="btn btn-primary" href="https://mac-studio-2.tail299fc7.ts.net/ens101/" target="_blank">Open Appt Desk &#8599;</a>
           </div>
